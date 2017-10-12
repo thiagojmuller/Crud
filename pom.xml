@@ -48,8 +48,7 @@
          
                   <dependency>                  
                   <groupId>mysql</groupId>                  
-                  <artifactId>mysql-connector-java</artifactId>
-                    <scope>test</scope>                 
+                  <artifactId>mysql-connector-java</artifactId>           
                   </dependency>
                   
   <dependency>                  
@@ -75,7 +74,22 @@
 		</plugins>
 		
 	</build>
+<repositories>
+        <repository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </repository>
 
-
+        <repository>
+            <id>codehaus</id>
+            <url>http://repository.codehaus.org/org/codehaus</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>
