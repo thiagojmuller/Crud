@@ -59,7 +59,7 @@
                   </dependency>
                   
   <dependency>                  
-  <groupId>com.h2database</groupId>                  
+  <groupId>com.h2.database</groupId>                  
   <artifactId>h2</artifactId>                         
   <scope>test</scope>
   </dependency>
