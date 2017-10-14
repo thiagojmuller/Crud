@@ -1,6 +1,5 @@
 package repositories;
 
-
 import java.util.List;
 
 import org.hibernate.annotations.NamedQueries;
@@ -16,11 +15,11 @@ import entities.Funcionario;
 
 @Transactional(readOnly = true)
 @NamedQueries({
-	@NamedQuery(name = "LancamentoRepository.findByFuncionarioId",
-	query = "SELECT lanc FROM Lancamento lanc WHERE lanc.funcionario.id = :funcionario")})
-public interface LancamentoRepository extends JpaRepository<Lancamento, Long>{
-	
+		@NamedQuery(name = "LancamentoRepository.findByFuncionarioId", query = "SELECT lanc FROM Lancamento lanc WHERE lanc.funcionario.id = :funcionario") })
+public interface LancamentoRepository extends JpaRepository<Lancamento, Long> {
+
 	List<Lancamento> findByFuncionarioId(@Param("funcionario") Long funcionario);
+
 	Page<Lancamento> findByFuncionarioId(@Param("funcionario") Long funcionario, Pageable pageable);
 
 }
